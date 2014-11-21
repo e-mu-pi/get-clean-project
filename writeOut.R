@@ -1,4 +1,4 @@
 source("run_analysis.R")
-write.table(data,
+write.table(tidy_data,
             file = "dataForSubmission.txt",
             row.names = FALSE)

@@ -47,7 +47,7 @@ load_X <- function(X_file, data_dir) {
 }
 
 load_y <- function(y_file) {
-  read.table(y_file, col.names = "Activity")
+  read.table(y_file, col.names = "ActivityCode")
 }
 
 load_inertia <- function( type, inertia_parent_dir ) {
@@ -85,7 +85,7 @@ load_data <- function(type, data_dir) {
   
   inertia <- load_inertia( type, sub_dir )
 
-  cbind(subject,X,y,inertia)
+  cbind(subject,y,X,inertia)
 }
 
 load_test <- function(data_dir) {
@@ -98,7 +98,9 @@ load_train <- function(data_dir) {
 
 load_activities <- function(data_dir) {
   activity_file <- file.path( data_dir, 'activity_labels.txt')
-  data <- read.table(activity_file,col.names=c("ActivityCode","Activity"))
+  data <- read.table(activity_file,
+                     col.names=c("ActivityCode","Activity"),
+                     stringsAsFactors=FALSE)
 }
 
 data_dir <- get_source_data()
