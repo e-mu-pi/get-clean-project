@@ -30,6 +30,17 @@ That file can be read back into R with
 Note that `dataForSubmission.txt` is not distributed by this repo, but rather it is created
 by `writeOut.R`.
 
+# Is the source data in your working directory?
+
+Probably not. The source data comes zipped, and depending on how you unzip it, 
+it could be in your working directory, in a directory in your working directory, 
+in a directory inside a directory in your working directory, etc. If you already 
+have the data, these scripts might not find exactly which directory you unzipped 
+into. The easiest thing to do is allow these scripts to redownload, but if you 
+must use what you already downloaded, please define `data_dir` in `retrieveData.R` 
+and comment out the line:
+    
+    data_dir <- get_source_data()
 
 # Run Analysis
 
