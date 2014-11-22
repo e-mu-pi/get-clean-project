@@ -50,7 +50,7 @@ These are the steps taken by `run_analysis.R`.
   Is the value of body acceleration in the X direction a separate observation from the 
   acceleration in the Y direction? I think they are not, although I realize that I am not
   an expert on how exactly to interpret the raw data. I think body acceleration, like the
-  other variables, is a single entity that must be observed in a triple of (X,Y,X) coordinates.
+  other variables, is a single entity that must be observed in a triple of (X,Y,Z) coordinates.
   They cannot be observed independently of each other. Similarly, taking a mean or a standard
   deviation over the window of observations are not separate observations of the same thing;
   they are measuring essentially different things.
