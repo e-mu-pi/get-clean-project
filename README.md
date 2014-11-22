@@ -9,7 +9,7 @@ Course Getting and Cleaning Data
 This repository has R code for retrieving and cleaning data from the Human Activity 
 Recognition Using Smartphones Data Set:
 
-[`digest`](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 # Produce Clean Data
 

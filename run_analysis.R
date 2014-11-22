@@ -32,11 +32,4 @@ named_activities <- add_activity_name %>% select(-ActivityCode)
 
 # Make tidy data of average of each variable for each activity and subject -----
 
-# It's possible that X, Y, Z can be interpreted as variable values that are 
-# occurring in column names. Thus, a new variable (column) Dimension could be added with
-# value X, Y, Z, and then the features in a row correspond to a single dimension.
-# Similarly, mean() and std() can be put int a variable SummaryType. 
-# But I haven't done that because I see these as measuring essentially different things.
-# 
-grouped_data <- named_activities %>% group_by(subject,Activity)
-tidy_data <- grouped_data %>% summarise_each(funs(mean))
+tidy_data <- named_activities %>% group_by(subject,Activity) %>% summarise_each(funs(mean))
